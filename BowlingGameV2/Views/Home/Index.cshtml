@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div id="bowlingGame" class="col-md-12">
+        <h2>Bowling game</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <form id="frameFields" class="form-inline">
+                    <div class="form-group col-xs-3">
+                        <label class="sr-only" for="rolle1">Roll 1</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">Roll 1</div>
+                            <input type="text" class="form-control" id="rolle1" required placeholder="0-10">
+                        </div>
+                        <label class="sr-only" for="rolle2">Roll 2</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">Roll 2</div>
+                            <input type="text" class="form-control" id="rolle2" required placeholder="0-10">
+                        </div>
+                        <div id="rolle3Panel" style="display: none;">
+                            <label class="sr-only" for="rolle3">Roll 3</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">Roll 3</div>
+                                <input type="text" class="form-control" id="rolle3" placeholder="0-10">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-default" id="calculateScore" value="Calculate"/>
+                </form>
+            </div>
+            <div class="error"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Game score <span id="bowlingGameScore" class="badge">0</span></div>
+                    <div class="panel-body">
+                        <p>Total Result of Game is displayed (frame result is calculated base on Mark!)</p>
+                        <p>@Html.ActionLink("Game rules", "About")</p>
+                    </div>
+                    <ol class="list-group" style="margin-top: 20px" id="frameRolls"></ol>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="gameResul"></div>
+            </div>
+        </div>
+    </div>
+</div>
