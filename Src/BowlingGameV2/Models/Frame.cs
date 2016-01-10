@@ -28,8 +28,6 @@ namespace BowlingGameV2.Models
                     if((Rolls.Count == 1 && Rolls.PinsDown == 10) ||
                         Rolls.Any() && Rolls.Last() == 10)
                         return Mark.Strike;
-                    if (Rolls.Count == 2 && Rolls.PinsDown == 10)
-                        return Mark.Spare;
                 }
                 if (Rolls.Count == 2 && Rolls.PinsDown == 10)
                     return Mark.Spare;
